@@ -23,6 +23,7 @@ _global_script_class_icons={
 config/name="Necropolis"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
+<<<<<<<HEADconfig/name="Necropolis"
 
 [display]
 

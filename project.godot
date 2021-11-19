@@ -25,6 +25,10 @@ run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 <<<<<<<HEADconfig/name="Necropolis"
 
+[autoload]
+
+CONSTANTS="*res://CONSTANTS.gd"
+
 [display]
 
 window/size/width=320

@@ -1,14 +1,16 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/Gravel.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Earth.png" type="Texture" id=3]
+[ext_resource path="res://GridHelper.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/Tree.png" type="Texture" id=5]
 [ext_resource path="res://assets/Border.png" type="Texture" id=6]
 [ext_resource path="res://assets/Gravel2.png" type="Texture" id=7]
+[ext_resource path="res://Farm.gd" type="Script" id=8]
 
 [sub_resource type="TileSet" id=1]
-0/name = "Gravel0.png"
+0/name = "gravel"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
@@ -22,7 +24,7 @@
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
-1/name = "Earth0.png"
+1/name = "earth"
 1/texture = ExtResource( 3 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
@@ -36,7 +38,7 @@
 1/shape_one_way_margin = 0.0
 1/shapes = [  ]
 1/z_index = 0
-2/name = "Gravel2.png"
+2/name = "gravel2"
 2/texture = ExtResource( 7 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
@@ -120,7 +122,7 @@
 7/shape_one_way_margin = 0.0
 7/shapes = [  ]
 7/z_index = 0
-8/name = "Gravel3.png"
+8/name = "gravel3"
 8/texture = ExtResource( 6 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
@@ -198,9 +200,13 @@ tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -1, 3, 0, -65536, 3, 0, -65523, 3, 0, -65522, 3, 0, -65521, 3, 0, 65535, 3, 0, 2, 2, 0, 3, 8, 0, 4, 2, 0, 5, 2, 0, 6, 2, 0, 7, 8, 0, 8, 2, 0, 9, 8, 0, 10, 8, 0, 11, 2, 0, 12, 3, 0, 15, 3, 0, 65536, 3, 0, 65538, 8, 0, 65539, 2, 0, 65540, 4, 0, 65541, 5, 0, 65542, 5, 0, 65543, 5, 0, 65544, 5, 0, 65545, 6, 0, 65546, 8, 0, 65547, 2, 0, 65549, 3, 0, 65550, 3, 0, 196607, 3, 0, 131072, 3, 0, 131074, 8, 0, 131075, 2, 0, 131076, 7, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 9, 0, 131082, 2, 0, 131083, 8, 0, 131084, 3, 0, 131085, 3, 0, 131086, 3, 0, 131087, 3, 0, 262142, 3, 0, 196610, 2, 0, 196611, 8, 0, 196612, 7, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 9, 0, 196618, 2, 0, 196619, 2, 0, 196623, 3, 0, 327679, 3, 0, 262144, 3, 0, 262146, 2, 0, 262147, 8, 0, 262148, 7, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 9, 0, 262154, 8, 0, 262155, 2, 0, 262156, 3, 0, 262157, 3, 0, 262158, 3, 0, 393214, 3, 0, 327682, 2, 0, 327683, 2, 0, 327684, 7, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 9, 0, 327690, 2, 0, 327691, 8, 0, 327692, 3, 0, 327693, 3, 0, 327695, 3, 0, 458751, 3, 0, 393216, 3, 0, 393218, 8, 0, 393219, 8, 0, 393220, 10, 0, 393221, 11, 0, 393222, 11, 0, 393223, 11, 0, 393224, 11, 0, 393225, 12, 0, 393226, 2, 0, 393227, 3, 0, 393228, 3, 0, 393229, 3, 0, 393230, 3, 0, 524286, 3, 0, 458754, 2, 0, 458755, 2, 0, 458756, 2, 0, 458757, 2, 0, 458758, 8, 0, 458759, 2, 0, 458760, 2, 0, 458761, 3, 0, 458762, 3, 0, 458763, 3, 0, 458766, 3, 0, 458767, 3, 0, 589823, 3, 0, 524288, 3, 0, 524289, 3, 0, 524290, 3, 0, 524291, 3, 0, 524292, 3, 0, 524293, 3, 0, 524294, 3, 0, 524295, 3, 0, 524296, 3, 0, 524297, 3, 0, 524298, 3, 0, 524299, 3, 0, 524300, 3, 0, 524301, 3, 0, 524302, 3, 0, 655357, 3, 0, 655359, 3, 0, 589824, 3, 0, 589826, 3, 0, 589829, 3, 0, 589834, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 720894, 3, 0, 655364, 3, 0, 655366, 3, 0, 655368, 3, 0, 655371, 3, 0, 720896, 3, 0, 720897, 3, 0, 720898, 3, 0, 720899, 3, 0, 720903, 3, 0, 720906, 3, 0, 786435, 3, 0, 786437, 3, 0, 786441, 3, 0 )
+script = ExtResource( 8 )
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
+[node name="Player" parent="TileMap" instance=ExtResource( 2 )]
 position = Vector2( 88, 40 )
+
+[node name="GridHelper" parent="TileMap" instance=ExtResource( 4 )]
+script = null
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 visible = false

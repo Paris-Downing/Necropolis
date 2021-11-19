@@ -1,7 +1,7 @@
-extends Node2D
+extends Node
 
-var _texture1 = load("res://assets/Gravel0.png")
-var _texture2 = load("res://assets/Earth0.png")
+var _texture1 = load("res://number1.png")
+var _texture2 = load("res://number2.png")
 var _texture_toggle: int = 1
 
 func _on_TextureButton_pressed() -> void:

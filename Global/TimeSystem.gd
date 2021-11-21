@@ -17,7 +17,7 @@ export (String) var season = "Spring"
 export (String) var spliter = "AM"
 export (String) var minute_interval = "00"
 
-const default_time_speed = 200
+const default_time_speed = 80
 var day_processed = false
 
 var time_speed = 80

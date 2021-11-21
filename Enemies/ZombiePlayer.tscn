@@ -1,11 +1,10 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=25 format=2]
 
-[ext_resource path="res://Player/Player.png" type="Texture" id=1]
-[ext_resource path="res://Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://assets/ZombiePlayer.png" type="Texture" id=1]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 4.0
-height = 4.1901
+radius = 4.41909
+height = 3.72924
 
 [sub_resource type="Animation" id=2]
 resource_name = "IdleDown"
@@ -203,8 +202,7 @@ start_node = "Idle"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=31]
 
-[node name="Player" type="KinematicBody2D"]
-script = ExtResource( 2 )
+[node name="KinematicBody2D" type="KinematicBody2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -9 )
@@ -213,6 +211,7 @@ hframes = 60
 frame = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.148651, -1.11486 )
 rotation = -1.5708
 shape = SubResource( 1 )
 

@@ -23,21 +23,21 @@ func _physics_process(delta):
 	
 	print("inside if")
 #		var player_pos = player.global_position
-	var tile_pos_player_is_on = farm.tile_pos_player_is_on #type Vector2 that has player's x/y coordinates
+#	var tile_pos_player_is_on = farm.tile_pos_player_is_on #type Vector2 that has player's x/y coordinates
 		#tile_pos_player_is_on = tile_pos_player_is_on.normalized()
-	print("player position ", tile_pos_player_is_on)
+#	print("player position ", tile_pos_player_is_on)
 #	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left");
 #	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("test_up");
 #	input_vector = input_vector.normalized();
 	
 #	if input_vector != Vector2.ZERO:
 #		face_direction = tile_pos_player_is_on 
-	animationTree.set("parameters/Idle/blend_position", tile_pos_player_is_on)
-	animationTree.set("parameters/Run/blend_position", tile_pos_player_is_on)
-	animationState.travel("Run")
-	velocity = velocity.move_toward(tile_pos_player_is_on * MAX_SPEED, ACCELERATION * delta)
+#	animationTree.set("parameters/Idle/blend_position", tile_pos_player_is_on)
+#	animationTree.set("parameters/Run/blend_position", tile_pos_player_is_on)
+#	animationState.travel("Run")
+#	velocity = velocity.move_toward(tile_pos_player_is_on * MAX_SPEED, ACCELERATION * delta)
 #	else:
 #		animationState.travel("Idle")
 #		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 		
-	velocity = move_and_slide(velocity)
+#	velocity = move_and_slide(velocity)
